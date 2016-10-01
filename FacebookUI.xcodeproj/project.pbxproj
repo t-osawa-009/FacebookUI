@@ -16,6 +16,8 @@
 		B0386D061D9FF5E50042CB44 /* StoryBoardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0386D031D9FF5E50042CB44 /* StoryBoardInstantiatable.swift */; };
 		B0386D071D9FF5E50042CB44 /* StringExtesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0386D041D9FF5E50042CB44 /* StringExtesion.swift */; };
 		B0386D081D9FF5E50042CB44 /* UICollectionViewExtesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0386D051D9FF5E50042CB44 /* UICollectionViewExtesion.swift */; };
+		B0A054AE1D9FF8C0009B5804 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A054AD1D9FF8C0009B5804 /* Color.swift */; };
+		B0A054B01D9FF907009B5804 /* UIColorExtesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A054AF1D9FF907009B5804 /* UIColorExtesion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		B0386D031D9FF5E50042CB44 /* StoryBoardInstantiatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoardInstantiatable.swift; sourceTree = "<group>"; };
 		B0386D041D9FF5E50042CB44 /* StringExtesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtesion.swift; sourceTree = "<group>"; };
 		B0386D051D9FF5E50042CB44 /* UICollectionViewExtesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtesion.swift; sourceTree = "<group>"; };
+		B0A054AD1D9FF8C0009B5804 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B0A054AF1D9FF907009B5804 /* UIColorExtesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtesion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 			children = (
 				B0386CE61D9FF4120042CB44 /* AppDelegate.swift */,
 				B0386CEF1D9FF4120042CB44 /* LaunchScreen.storyboard */,
+				B0A054AD1D9FF8C0009B5804 /* Color.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 				B0386D031D9FF5E50042CB44 /* StoryBoardInstantiatable.swift */,
 				B0386D041D9FF5E50042CB44 /* StringExtesion.swift */,
 				B0386D051D9FF5E50042CB44 /* UICollectionViewExtesion.swift */,
+				B0A054AF1D9FF907009B5804 /* UIColorExtesion.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -191,7 +197,9 @@
 			files = (
 				B0386CFB1D9FF5170042CB44 /* PostViewController.swift in Sources */,
 				B0386D061D9FF5E50042CB44 /* StoryBoardInstantiatable.swift in Sources */,
+				B0A054AE1D9FF8C0009B5804 /* Color.swift in Sources */,
 				B0386D021D9FF5D90042CB44 /* ClassNameExtesion.swift in Sources */,
+				B0A054B01D9FF907009B5804 /* UIColorExtesion.swift in Sources */,
 				B0386D071D9FF5E50042CB44 /* StringExtesion.swift in Sources */,
 				B0386CE71D9FF4120042CB44 /* AppDelegate.swift in Sources */,
 				B0386D081D9FF5E50042CB44 /* UICollectionViewExtesion.swift in Sources */,
