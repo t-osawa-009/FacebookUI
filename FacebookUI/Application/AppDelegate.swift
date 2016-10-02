@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //ナビゲーションアイテムの色を変更
         UINavigationBar.appearance().tintColor = UIColor.white
         //ナビゲーションバーの背景を変更
-        UINavigationBar.appearance().barTintColor = Color.facebookColor()
+        UINavigationBar.appearance().barTintColor = Color.facebookColor
         //ナビゲーションのタイトル文字列の色を変更
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     }

@@ -10,7 +10,11 @@ import Foundation
 import UIKit
 
 struct Color {
-    static func facebookColor() -> UIColor {
+    static var facebookColor: UIColor {
         return UIColor(hex: 0x3b5998)
+    }
+    
+    static var facebookBackgroundColor: UIColor {
+        return UIColor(hex: 0x17233d)
     }
 }
