@@ -18,6 +18,8 @@
 		B0386D081D9FF5E50042CB44 /* UICollectionViewExtesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0386D051D9FF5E50042CB44 /* UICollectionViewExtesion.swift */; };
 		B0A054AE1D9FF8C0009B5804 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A054AD1D9FF8C0009B5804 /* Color.swift */; };
 		B0A054B01D9FF907009B5804 /* UIColorExtesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A054AF1D9FF907009B5804 /* UIColorExtesion.swift */; };
+		B0A054B41DA0A9CF009B5804 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A054B21DA0A9CF009B5804 /* PostCollectionViewCell.swift */; };
+		B0A054B51DA0A9CF009B5804 /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A054B31DA0A9CF009B5804 /* PostCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		B0386D051D9FF5E50042CB44 /* UICollectionViewExtesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtesion.swift; sourceTree = "<group>"; };
 		B0A054AD1D9FF8C0009B5804 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B0A054AF1D9FF907009B5804 /* UIColorExtesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtesion.swift; sourceTree = "<group>"; };
+		B0A054B21DA0A9CF009B5804 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		B0A054B31DA0A9CF009B5804 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 		B0386CFF1D9FF5990042CB44 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				B0A054B11DA0A9AE009B5804 /* Views */,
 				B0386CF81D9FF4F50042CB44 /* PostViewController.storyboard */,
 				B0386CFA1D9FF5170042CB44 /* PostViewController.swift */,
 			);
@@ -120,6 +125,15 @@
 				B0A054AF1D9FF907009B5804 /* UIColorExtesion.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B0A054B11DA0A9AE009B5804 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0A054B21DA0A9CF009B5804 /* PostCollectionViewCell.swift */,
+				B0A054B31DA0A9CF009B5804 /* PostCollectionViewCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A054B51DA0A9CF009B5804 /* PostCollectionViewCell.xib in Resources */,
 				B0386CF11D9FF4120042CB44 /* LaunchScreen.storyboard in Resources */,
 				B0386CF91D9FF4F50042CB44 /* PostViewController.storyboard in Resources */,
 				B0386CEE1D9FF4120042CB44 /* Assets.xcassets in Resources */,
@@ -203,6 +218,7 @@
 				B0386D071D9FF5E50042CB44 /* StringExtesion.swift in Sources */,
 				B0386CE71D9FF4120042CB44 /* AppDelegate.swift in Sources */,
 				B0386D081D9FF5E50042CB44 /* UICollectionViewExtesion.swift in Sources */,
+				B0A054B41DA0A9CF009B5804 /* PostCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
