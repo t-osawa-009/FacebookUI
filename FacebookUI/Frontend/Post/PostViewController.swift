@@ -16,11 +16,14 @@ final class PostViewController: UIViewController {
     }
     fileprivate var previousScrollViewYOffset: CGFloat = 0.0
     fileprivate var searchBar: UISearchBar!
+    fileprivate var fullScreenable: FullScreenable!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBar()
-        
         let rightButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "man"), style: .done, target: self, action: #selector(rightButtonItemTapped(sender:)))
+        fullScreenable = FullScreenable(scrollDelegate: collectionView.delegate!)
+        collectionView.delegate = (fullScreenable as UICollectionViewDelegate)
+        
         navigationItem.rightBarButtonItem = rightButtonItem
     }
     

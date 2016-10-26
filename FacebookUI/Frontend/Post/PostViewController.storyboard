@@ -29,7 +29,7 @@
                                 <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="Oxk-EB-t6F" id="RW8-Y9-Aiz"/>
-                                    <outlet property="delegate" destination="Oxk-EB-t6F" id="Yew-OG-uvw"/>
+                                    <outlet property="delegate" destination="Oxk-EB-t6F" id="B8n-Og-VKT"/>
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbA-gU-0Sc">

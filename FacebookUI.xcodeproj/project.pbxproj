@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B01600DE1DC0D71500D498A4 /* FullScreenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01600DD1DC0D71500D498A4 /* FullScreenable.swift */; };
+		B01600E01DC0D7B300D498A4 /* Scrollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01600DF1DC0D7B300D498A4 /* Scrollable.swift */; };
 		B0386CE71D9FF4120042CB44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0386CE61D9FF4120042CB44 /* AppDelegate.swift */; };
 		B0386CEE1D9FF4120042CB44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0386CED1D9FF4120042CB44 /* Assets.xcassets */; };
 		B0386CF11D9FF4120042CB44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0386CEF1D9FF4120042CB44 /* LaunchScreen.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B01600DD1DC0D71500D498A4 /* FullScreenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenable.swift; sourceTree = "<group>"; };
+		B01600DF1DC0D7B300D498A4 /* Scrollable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scrollable.swift; sourceTree = "<group>"; };
 		B0386CE31D9FF4120042CB44 /* FacebookUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0386CE61D9FF4120042CB44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0386CED1D9FF4120042CB44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B01600DC1DC0D6FF00D498A4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B01600DD1DC0D71500D498A4 /* FullScreenable.swift */,
+				B01600DF1DC0D7B300D498A4 /* Scrollable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		B0386CDA1D9FF4120042CB44 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +83,7 @@
 		B0386CE51D9FF4120042CB44 /* FacebookUI */ = {
 			isa = PBXGroup;
 			children = (
+				B01600DC1DC0D6FF00D498A4 /* Protocol */,
 				B0386CFC1D9FF5540042CB44 /* Application */,
 				B0386CFD1D9FF5680042CB44 /* Assets */,
 				B0386D001D9FF5B60042CB44 /* Extensions */,
@@ -214,8 +228,10 @@
 				B0386D061D9FF5E50042CB44 /* StoryBoardInstantiatable.swift in Sources */,
 				B0A054AE1D9FF8C0009B5804 /* Color.swift in Sources */,
 				B0386D021D9FF5D90042CB44 /* ClassNameExtesion.swift in Sources */,
+				B01600DE1DC0D71500D498A4 /* FullScreenable.swift in Sources */,
 				B0A054B01D9FF907009B5804 /* UIColorExtesion.swift in Sources */,
 				B0386D071D9FF5E50042CB44 /* StringExtesion.swift in Sources */,
+				B01600E01DC0D7B300D498A4 /* Scrollable.swift in Sources */,
 				B0386CE71D9FF4120042CB44 /* AppDelegate.swift in Sources */,
 				B0386D081D9FF5E50042CB44 /* UICollectionViewExtesion.swift in Sources */,
 				B0A054B41DA0A9CF009B5804 /* PostCollectionViewCell.swift in Sources */,
