@@ -37,14 +37,108 @@
                                     <constraint firstAttribute="height" constant="20" id="hTu-wa-NE6"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bf0-UP-uBI">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AY7-bV-Dgf">
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vff-na-LMT">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJI-wx-cx3">
+                                                        <state key="normal" title="ライブ">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKm-Iw-t3q">
+                                                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="1" id="jLq-n3-h2C"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="kKm-Iw-t3q" firstAttribute="top" secondItem="Vff-na-LMT" secondAttribute="top" constant="7" id="53J-T5-LTV"/>
+                                                    <constraint firstItem="rJI-wx-cx3" firstAttribute="top" secondItem="Vff-na-LMT" secondAttribute="top" id="6FQ-Ce-q5M"/>
+                                                    <constraint firstAttribute="trailing" secondItem="kKm-Iw-t3q" secondAttribute="trailing" id="742-eY-wVU"/>
+                                                    <constraint firstItem="rJI-wx-cx3" firstAttribute="leading" secondItem="Vff-na-LMT" secondAttribute="leading" id="7Li-Fz-TZ0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="kKm-Iw-t3q" secondAttribute="bottom" constant="7" id="8L2-wW-9Ux"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rJI-wx-cx3" secondAttribute="trailing" id="OWm-oc-98t"/>
+                                                    <constraint firstAttribute="bottom" secondItem="rJI-wx-cx3" secondAttribute="bottom" id="Vj3-IP-CAZ"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PnJ-Gq-8ta">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jk2-lN-q1i">
+                                                        <state key="normal" title="写真">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="Jk2-lN-q1i" firstAttribute="top" secondItem="PnJ-Gq-8ta" secondAttribute="top" id="1Gc-Rj-PrP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Jk2-lN-q1i" secondAttribute="trailing" id="Kdl-uG-lG9"/>
+                                                    <constraint firstItem="Jk2-lN-q1i" firstAttribute="leading" secondItem="PnJ-Gq-8ta" secondAttribute="leading" id="sbe-y8-jS8"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Jk2-lN-q1i" secondAttribute="bottom" id="tyX-vy-O99"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01s-TY-32W">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iaf-xM-gxU">
+                                                        <state key="normal" title="チェックイン">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pB0-Qb-yO9">
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="1" id="zr1-ou-65X"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Iaf-xM-gxU" secondAttribute="trailing" id="0cj-mJ-SCu"/>
+                                                    <constraint firstItem="pB0-Qb-yO9" firstAttribute="leading" secondItem="01s-TY-32W" secondAttribute="leading" id="2Rt-fL-laO"/>
+                                                    <constraint firstItem="Iaf-xM-gxU" firstAttribute="leading" secondItem="01s-TY-32W" secondAttribute="leading" id="M7D-JN-FXW"/>
+                                                    <constraint firstItem="pB0-Qb-yO9" firstAttribute="top" secondItem="01s-TY-32W" secondAttribute="top" constant="7" id="b4Q-vh-31v"/>
+                                                    <constraint firstAttribute="bottom" secondItem="pB0-Qb-yO9" secondAttribute="bottom" constant="7" id="oaY-Q1-y4i"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Iaf-xM-gxU" secondAttribute="bottom" id="uYe-w8-Wry"/>
+                                                    <constraint firstItem="Iaf-xM-gxU" firstAttribute="top" secondItem="01s-TY-32W" secondAttribute="top" id="zqA-Du-rmt"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOB-9r-5r1">
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="RbZ-JC-fDJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="JOB-9r-5r1" secondAttribute="bottom" id="67Q-SV-OLz"/>
+                                    <constraint firstAttribute="trailing" secondItem="AY7-bV-Dgf" secondAttribute="trailing" id="9sJ-qR-ANt"/>
+                                    <constraint firstAttribute="height" constant="44" id="OJC-Sw-Ubt"/>
+                                    <constraint firstItem="AY7-bV-Dgf" firstAttribute="top" secondItem="bf0-UP-uBI" secondAttribute="top" id="bXq-Kz-WYr"/>
+                                    <constraint firstItem="AY7-bV-Dgf" firstAttribute="leading" secondItem="bf0-UP-uBI" secondAttribute="leading" id="bYr-Rk-uAs"/>
+                                    <constraint firstAttribute="bottom" secondItem="AY7-bV-Dgf" secondAttribute="bottom" id="dan-0f-szV"/>
+                                    <constraint firstItem="JOB-9r-5r1" firstAttribute="leading" secondItem="bf0-UP-uBI" secondAttribute="leading" id="pnk-gp-Nbx"/>
+                                    <constraint firstAttribute="trailing" secondItem="JOB-9r-5r1" secondAttribute="trailing" id="tYN-cV-PQI"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="xbA-gU-0Sc" secondAttribute="trailing" id="3eA-W1-aMb"/>
                             <constraint firstItem="uEt-a2-Apx" firstAttribute="top" secondItem="PkT-dO-eEN" secondAttribute="bottom" id="7oB-p2-9UK"/>
                             <constraint firstItem="PkT-dO-eEN" firstAttribute="leading" secondItem="BDx-nU-6mm" secondAttribute="leading" id="NEw-qN-WVF"/>
+                            <constraint firstItem="bf0-UP-uBI" firstAttribute="leading" secondItem="BDx-nU-6mm" secondAttribute="leading" id="Qnr-ri-A2K"/>
                             <constraint firstAttribute="trailing" secondItem="PkT-dO-eEN" secondAttribute="trailing" id="TMp-L1-odr"/>
                             <constraint firstItem="xbA-gU-0Sc" firstAttribute="top" secondItem="BDx-nU-6mm" secondAttribute="top" id="TpV-pK-j36"/>
+                            <constraint firstAttribute="trailing" secondItem="bf0-UP-uBI" secondAttribute="trailing" id="X64-eW-2LD"/>
+                            <constraint firstItem="bf0-UP-uBI" firstAttribute="top" secondItem="PkT-dO-eEN" secondAttribute="top" constant="66" id="mp6-wQ-CUK"/>
                             <constraint firstItem="xbA-gU-0Sc" firstAttribute="leading" secondItem="BDx-nU-6mm" secondAttribute="leading" id="o4U-7P-eWM"/>
                             <constraint firstItem="PkT-dO-eEN" firstAttribute="top" secondItem="BDx-nU-6mm" secondAttribute="top" id="sTh-G3-zCr"/>
                         </constraints>
@@ -52,6 +146,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="collectionView" destination="PkT-dO-eEN" id="2Xy-sO-YQb"/>
+                        <outlet property="topMenuViewTopConstraint" destination="mp6-wQ-CUK" id="XKA-LO-Udz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2I-dG-glh" userLabel="First Responder" sceneMemberID="firstResponder"/>

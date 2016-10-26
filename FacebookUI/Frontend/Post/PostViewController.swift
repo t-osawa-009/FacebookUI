@@ -16,6 +16,7 @@ final class PostViewController: UIViewController {
             collectionView.collectionViewLayout = flowLayout
         }
     }
+    @IBOutlet fileprivate weak var topMenuViewTopConstraint: NSLayoutConstraint!
     fileprivate var searchBar: UISearchBar!
     fileprivate var fullScreenable: FullScreenable!
     fileprivate let flowLayout = UICollectionViewFlowLayout()
@@ -28,7 +29,7 @@ final class PostViewController: UIViewController {
         
         fullScreenable = FullScreenable(scrollDelegate: self, fromViewController: self)
         collectionView.delegate = (fullScreenable as UICollectionViewDelegate)
-
+        fullScreenable.delegate = self
         navigationItem.rightBarButtonItem = rightButtonItem
     }
     
@@ -74,5 +75,11 @@ extension PostViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(with: PostCollectionViewCell.self, for: indexPath)
         return cell
+    }
+}
+
+extension PostViewController: FullScreenableDelegate {
+    func updateNavigationBarframe(mutablenavigationBarFrame: CGRect) {
+        topMenuViewTopConstraint.constant = 44 + mutablenavigationBarFrame.origin.y
     }
 }

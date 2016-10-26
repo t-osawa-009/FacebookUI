@@ -14,6 +14,7 @@ protocol FullScreenableDelegate: class {
 }
 
 class FullScreenable: NSObject, Scrollable {
+    weak var delegate: FullScreenableDelegate?
     var upThresholdY: CGFloat = 0.0
     var donwThresholdY: CGFloat = 0.0
     var previusDirectioin: Direction = .none
@@ -77,6 +78,7 @@ extension FullScreenable: UIScrollViewDelegate, UITableViewDelegate, UICollectio
         }
         fromViewController.navigationController?.navigationBar.frame = mutablenavigationBarFrame
         updateBarButtonItems(alpha: 1 - framePercentageHidden, fromViewController: self.fromViewController)
+        delegate?.updateNavigationBarframe(mutablenavigationBarFrame: mutablenavigationBarFrame)
         previousOffsetY = scrollOffset
     }
     
