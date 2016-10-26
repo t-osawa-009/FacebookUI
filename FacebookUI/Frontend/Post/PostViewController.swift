@@ -12,11 +12,15 @@ final class PostViewController: UIViewController {
     @IBOutlet fileprivate weak var collectionView: UICollectionView! {
         didSet {
             collectionView.register(cellType: PostCollectionViewCell.self)
+            flowLayout.scrollDirection = .vertical
+            collectionView.collectionViewLayout = flowLayout
         }
     }
     fileprivate var previousScrollViewYOffset: CGFloat = 0.0
     fileprivate var searchBar: UISearchBar!
     fileprivate var fullScreenable: FullScreenable!
+    fileprivate let flowLayout = UICollectionViewFlowLayout()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBar()
@@ -25,6 +29,11 @@ final class PostViewController: UIViewController {
         collectionView.delegate = (fullScreenable as UICollectionViewDelegate)
         
         navigationItem.rightBarButtonItem = rightButtonItem
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        flowLayout.itemSize = CGSize.init(width: collectionView.frame.width, height: PostCollectionViewCell.height())
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -125,24 +134,5 @@ extension PostViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(with: PostCollectionViewCell.self, for: indexPath)
         return cell
-    }
-}
-
-extension PostViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.zero
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width
-        return CGSize(width: width, height: PostCollectionViewCell.height())
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10.0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
     }
 }
