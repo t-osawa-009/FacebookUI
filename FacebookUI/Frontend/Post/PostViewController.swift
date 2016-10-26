@@ -16,7 +16,6 @@ final class PostViewController: UIViewController {
             collectionView.collectionViewLayout = flowLayout
         }
     }
-    fileprivate var previousScrollViewYOffset: CGFloat = 0.0
     fileprivate var searchBar: UISearchBar!
     fileprivate var fullScreenable: FullScreenable!
     fileprivate let flowLayout = UICollectionViewFlowLayout()
@@ -25,9 +24,11 @@ final class PostViewController: UIViewController {
         super.viewDidLoad()
         setupSearchBar()
         let rightButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "man"), style: .done, target: self, action: #selector(rightButtonItemTapped(sender:)))
-        fullScreenable = FullScreenable(scrollDelegate: collectionView.delegate!)
-        collectionView.delegate = (fullScreenable as UICollectionViewDelegate)
+        collectionView.delegate = self
         
+        fullScreenable = FullScreenable(scrollDelegate: self, fromViewController: self)
+        collectionView.delegate = (fullScreenable as UICollectionViewDelegate)
+
         navigationItem.rightBarButtonItem = rightButtonItem
     }
     
@@ -62,68 +63,7 @@ final class PostViewController: UIViewController {
 }
 
 extension PostViewController: UICollectionViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard let navigationBarFrame = navigationController?.navigationBar.frame else {return}
-        var mutablenavigationBarFrame = navigationBarFrame
-        let size = mutablenavigationBarFrame.size.height - 21
-        let framePercentageHidden = ((20 - mutablenavigationBarFrame.origin.y) / (mutablenavigationBarFrame.size.height - 1));
-        let scrollOffset = scrollView.contentOffset.y
-        let scrollDiff = scrollOffset - self.previousScrollViewYOffset
-        let scrollHeight = scrollView.frame.size.height
-        let scrollContentSizeHeight = scrollView.contentSize.height + scrollView.contentInset.bottom
-        
-        if scrollOffset <= -scrollView.contentInset.top {
-            mutablenavigationBarFrame.origin.y = 20
-        } else if ((scrollOffset + scrollHeight) >= scrollContentSizeHeight) {
-            mutablenavigationBarFrame.origin.y = -size
-        } else {
-            mutablenavigationBarFrame.origin.y = min(20, max(-20, mutablenavigationBarFrame.origin.y - scrollDiff))
-        }
-        navigationController?.navigationBar.frame = mutablenavigationBarFrame
-        updateBarButtonItems(alpha: 1 - framePercentageHidden)
-        self.previousScrollViewYOffset = scrollOffset;
-    }
-    
-    func stoppedScrolling() {
-        guard let frame = navigationController?.navigationBar.frame else {return}
-        if frame.origin.y < 20 {
-            self.animateNavBarTo(y: frame.size.height - 21)
-        }
-    }
-    
-    func animateNavBarTo(y: CGFloat) {
-        guard let navigationBarFrame = navigationController?.navigationBar.frame else {return}
-        var mutablenavigationBarFrame = navigationBarFrame
-        
-        UIView.animate(withDuration: 0.2) {
-            let alpha: CGFloat =  {
-                if mutablenavigationBarFrame.origin.y >= y {
-                    return 0
-                } else {
-                    return 1
-                }
-            }()
-            mutablenavigationBarFrame.origin.y = y
-            self.navigationController?.navigationBar.frame = navigationBarFrame
-            self.updateBarButtonItems(alpha: CGFloat(alpha))
-        }
-    }
-    
-    func updateBarButtonItems(alpha: CGFloat) {
-        if let leftButtonItems = navigationController?.navigationItem.leftBarButtonItems {
-            for (_, value) in (leftButtonItems.enumerated()) {
-                value.customView?.alpha = alpha
-            }
-        }
-        
-        if let rightBarButtonItems = navigationController?.navigationItem.rightBarButtonItems {
-            for (_, value) in (rightBarButtonItems.enumerated()) {
-                value.customView?.alpha = alpha
-            }
-        }
-        navigationItem.titleView?.alpha = alpha
-        navigationController?.navigationBar.tintColor = navigationController?.navigationBar.tintColor.withAlphaComponent(alpha)
-    }
+
 }
 
 extension PostViewController: UICollectionViewDataSource {
